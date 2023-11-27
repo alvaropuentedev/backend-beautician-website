@@ -1,5 +1,5 @@
 # Builder Stage
-FROM eclipse-temurin:21-jdk AS build
+FROM eclipse-temurin:17-jdk AS build
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Imagen final
-FROM eclipse-temurin:21-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
 
 # Set the working directory in the container
 WORKDIR /app
