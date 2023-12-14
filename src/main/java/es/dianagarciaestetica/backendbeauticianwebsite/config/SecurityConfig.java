@@ -31,6 +31,7 @@ public class SecurityConfig {
 						.requestMatchers(HttpMethod.DELETE).permitAll()
 						.requestMatchers(HttpMethod.OPTIONS).permitAll()
 						.requestMatchers("/auth/**").permitAll()
+						.requestMatchers("/admin/**").permitAll()
 						.anyRequest().authenticated())
                 .sessionManagement(sessionManager ->
                         sessionManager
