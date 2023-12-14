@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "client", schema = "client")
+@Table(name = "clients", schema = "client")
 public class ClientDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
