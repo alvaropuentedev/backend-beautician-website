@@ -20,7 +20,7 @@ import es.dianagarciaestetica.backendbeauticianwebsite.services.ClientService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@CrossOrigin(origins = { "https://dianagarciaestetica.es", "http://localhost:4200/" })
+@CrossOrigin(origins = { "https://dianagarciaestetica.es/", "http://localhost:4200/" })
 @AllArgsConstructor
 @RequestMapping("/api")
 public class ClientController {
