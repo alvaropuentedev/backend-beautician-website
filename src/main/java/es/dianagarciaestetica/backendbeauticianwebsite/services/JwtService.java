@@ -19,7 +19,7 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 	@Value("${JWT_SECRET_KEY}")
-    private static String SECRET_KEY;
+    private static String secretKey;
 	
     public String getToken(UserDetails user) {
         return getToken(new HashMap<>(), user);
@@ -38,7 +38,7 @@ public class JwtService {
     }
 
     private Key getKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+        byte[] keyBytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
